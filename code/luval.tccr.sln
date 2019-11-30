@@ -7,6 +7,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "luval.tccr.indicadores", "l
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "luval.tccr.terminal", "luval.tccr.terminal\luval.tccr.terminal.csproj", "{5EA0C129-EB1C-4F8D-9372-C89E445DE189}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "luval.tccr.storage", "luval.tccr.storage\luval.tccr.storage.csproj", "{3CE10301-1291-499A-A3B3-B6B04CF354C9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "luval.tccr.config", "luval.tccr.config\luval.tccr.config.csproj", "{46D319BF-D5D9-4FF9-8A57-A13FFD1A3152}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +25,14 @@ Global
 		{5EA0C129-EB1C-4F8D-9372-C89E445DE189}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5EA0C129-EB1C-4F8D-9372-C89E445DE189}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5EA0C129-EB1C-4F8D-9372-C89E445DE189}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3CE10301-1291-499A-A3B3-B6B04CF354C9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3CE10301-1291-499A-A3B3-B6B04CF354C9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3CE10301-1291-499A-A3B3-B6B04CF354C9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3CE10301-1291-499A-A3B3-B6B04CF354C9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{46D319BF-D5D9-4FF9-8A57-A13FFD1A3152}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{46D319BF-D5D9-4FF9-8A57-A13FFD1A3152}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{46D319BF-D5D9-4FF9-8A57-A13FFD1A3152}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{46D319BF-D5D9-4FF9-8A57-A13FFD1A3152}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -1,0 +1,54 @@
+﻿Id,Name,BuyCode,SaleCode,Type
+1,Acobo Puesto de Bolsa S.A.,3427,3428,Puestos de Bolsa
+2,Banco Bac San José,3181,3215,Privada
+3,Banco BCT,3151,3210,Privada
+4,Banco Cathay,3180,3214,Privada
+5,Banco Citibank Costa Rica,3153,3212,Privada
+6,Banco CMB,3154,NULL,Privada
+7,Banco Crédito Agrícola de Cartago,3146,3206,Publica
+8,Banco Davivienda (Costa Rica) S.A,3152,3211,Privada
+9,Banco de Costa Rica,3148,3207,Publica
+10,Banco General Costa Rica S.A,3566,3568,Privada
+11,Banco Improsa,3184,3218,Privada
+12,Banco Interfin,3185,NULL,Privada
+13,Banco Lafise,3183,3217,Privada
+14,Banco Nacional,3149,3208,Publica
+15,Banco Popular,3179,3209,Publica
+16,Banco Promerica,3186,3220,Privada
+17,Banco Uno,3182,NULL,Privada
+18,BCR Valores Puesto de Bolsa,22601,NULL,Puestos de Bolsa
+19,BCT Valores Puesto de Bolsa S.A.,3552,3553,Puestos de Bolsa
+20,BN Valores Puesto Bolsa,3337,3338,Puestos de Bolsa
+21,Casa Cambio Global Exchange,3203,3277,Casas de Cambio
+22,Casa Cambio Soluciones Monetarias S.A.,3556,NULL,Casas de Cambio
+23,Casa Cambio Tele Dólar,3201,3271,Casas de Cambio
+24,Casa de cambio Interbolsa,3417,NULL,Casas de Cambio
+25,Casa de Cambio Latin American Exchange,19860,19861,Casas de Cambio
+26,Coopealianza,3289,3290,Cooperativas
+27,Coope-Ande N° 1 R.L,3597,3598,Cooperativas
+28,Coopemex,3199,NULL,Cooperativas
+29,Coopenae,3200,3234,Cooperativas
+30,Coopeorotina R.L.,3361,NULL,Cooperativas
+31,Cooperativa Coocique,3197,3231,Cooperativas
+32,Cooperativa Credecoop,3196,3230,Cooperativas
+33,Cooperativa San Marcos,3198,3232,Cooperativas
+34,Coopesanramon R.L.,3345,NULL,Cooperativas
+35,Coopeservidores R.L.,3563,3567,Cooperativas
+36,Financiera Cafsa,3193,3227,Financieras
+37,Financiera Comeca,3189,3223,Financieras
+38,Financiera DESYFIN S.A.,3341,3342,Financieras
+39,Financiera Gente S.A.,3593,3594,Financieras
+40,Financiera Londres,3188,NULL,Financieras
+41,Financiera Miravalles,3192,NULL,Financieras
+42,Financiera Multivalores,3190,NULL,Financieras
+43,INS Valores Puesto de Bolsa S.A.,3549,3550,Puestos de Bolsa
+44,Interbolsa,3281,NULL,Puestos de Bolsa
+45,Mutual Alajuela,3194,3228,Mutuales
+46,Mutual Cartago,3195,3229,Mutuales
+47,Mutual Valores Puesto de Bolsa,22849,NULL,Puestos de Bolsa
+48,PB Inversiones SAMA,23701,NULL,Puestos de Bolsa
+49,Popular Valores Puesto de Bolsa,19728,NULL,Puestos de Bolsa
+50,Prival Bank (Costa Rica) S.A,3191,3225,Financieras
+51,Puesto de Bolsa Aldesa Valores,3204,3278,Puestos de Bolsa
+52,Scotiabank C.R.,3187,3221,Privada
+53,Serviexpreso Money Transfer Casa de Cambio,22964,NULL,Casas de Cambio

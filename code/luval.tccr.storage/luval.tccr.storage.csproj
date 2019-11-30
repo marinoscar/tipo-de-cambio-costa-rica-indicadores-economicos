@@ -1,0 +1,17 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.2</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\luval.tccr.indicadores\luval.tccr.indicadores.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="luval.data.core">
+      <HintPath>..\..\libraries\luval.data\luval.data.core.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+</Project>

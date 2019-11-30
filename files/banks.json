@@ -1,0 +1,373 @@
+[
+  {
+    "Id": 1,
+    "Name": "Acobo Puesto de Bolsa S.A.",
+    "BuyCode": 3427,
+    "SaleCode": 3428,
+    "Type": "Puestos de Bolsa"
+  },
+  {
+    "Id": 2,
+    "Name": "Banco Bac San José",
+    "BuyCode": 3181,
+    "SaleCode": 3215,
+    "Type": "Privada"
+  },
+  {
+    "Id": 3,
+    "Name": "Banco BCT",
+    "BuyCode": 3151,
+    "SaleCode": 3210,
+    "Type": "Privada"
+  },
+  {
+    "Id": 4,
+    "Name": "Banco Cathay",
+    "BuyCode": 3180,
+    "SaleCode": 3214,
+    "Type": "Privada"
+  },
+  {
+    "Id": 5,
+    "Name": "Banco Citibank Costa Rica",
+    "BuyCode": 3153,
+    "SaleCode": 3212,
+    "Type": "Privada"
+  },
+  {
+    "Id": 6,
+    "Name": "Banco CMB",
+    "BuyCode": 3154,
+    "SaleCode": "NULL",
+    "Type": "Privada"
+  },
+  {
+    "Id": 7,
+    "Name": "Banco Crédito Agrícola de Cartago",
+    "BuyCode": 3146,
+    "SaleCode": 3206,
+    "Type": "Publica"
+  },
+  {
+    "Id": 8,
+    "Name": "Banco Davivienda (Costa Rica) S.A",
+    "BuyCode": 3152,
+    "SaleCode": 3211,
+    "Type": "Privada"
+  },
+  {
+    "Id": 9,
+    "Name": "Banco de Costa Rica",
+    "BuyCode": 3148,
+    "SaleCode": 3207,
+    "Type": "Publica"
+  },
+  {
+    "Id": 10,
+    "Name": "Banco General Costa Rica S.A",
+    "BuyCode": 3566,
+    "SaleCode": 3568,
+    "Type": "Privada"
+  },
+  {
+    "Id": 11,
+    "Name": "Banco Improsa",
+    "BuyCode": 3184,
+    "SaleCode": 3218,
+    "Type": "Privada"
+  },
+  {
+    "Id": 12,
+    "Name": "Banco Interfin",
+    "BuyCode": 3185,
+    "SaleCode": "NULL",
+    "Type": "Privada"
+  },
+  {
+    "Id": 13,
+    "Name": "Banco Lafise",
+    "BuyCode": 3183,
+    "SaleCode": 3217,
+    "Type": "Privada"
+  },
+  {
+    "Id": 14,
+    "Name": "Banco Nacional",
+    "BuyCode": 3149,
+    "SaleCode": 3208,
+    "Type": "Publica"
+  },
+  {
+    "Id": 15,
+    "Name": "Banco Popular",
+    "BuyCode": 3179,
+    "SaleCode": 3209,
+    "Type": "Publica"
+  },
+  {
+    "Id": 16,
+    "Name": "Banco Promerica",
+    "BuyCode": 3186,
+    "SaleCode": 3220,
+    "Type": "Privada"
+  },
+  {
+    "Id": 17,
+    "Name": "Banco Uno",
+    "BuyCode": 3182,
+    "SaleCode": "NULL",
+    "Type": "Privada"
+  },
+  {
+    "Id": 18,
+    "Name": "BCR Valores Puesto de Bolsa",
+    "BuyCode": 22601,
+    "SaleCode": "NULL",
+    "Type": "Puestos de Bolsa"
+  },
+  {
+    "Id": 19,
+    "Name": "BCT Valores Puesto de Bolsa S.A.",
+    "BuyCode": 3552,
+    "SaleCode": 3553,
+    "Type": "Puestos de Bolsa"
+  },
+  {
+    "Id": 20,
+    "Name": "BN Valores Puesto Bolsa",
+    "BuyCode": 3337,
+    "SaleCode": 3338,
+    "Type": "Puestos de Bolsa"
+  },
+  {
+    "Id": 21,
+    "Name": "Casa Cambio Global Exchange",
+    "BuyCode": 3203,
+    "SaleCode": 3277,
+    "Type": "Casas de Cambio"
+  },
+  {
+    "Id": 22,
+    "Name": "Casa Cambio Soluciones Monetarias S.A.",
+    "BuyCode": 3556,
+    "SaleCode": "NULL",
+    "Type": "Casas de Cambio"
+  },
+  {
+    "Id": 23,
+    "Name": "Casa Cambio Tele Dólar",
+    "BuyCode": 3201,
+    "SaleCode": 3271,
+    "Type": "Casas de Cambio"
+  },
+  {
+    "Id": 24,
+    "Name": "Casa de cambio Interbolsa",
+    "BuyCode": 3417,
+    "SaleCode": "NULL",
+    "Type": "Casas de Cambio"
+  },
+  {
+    "Id": 25,
+    "Name": "Casa de Cambio Latin American Exchange",
+    "BuyCode": 19860,
+    "SaleCode": 19861,
+    "Type": "Casas de Cambio"
+  },
+  {
+    "Id": 26,
+    "Name": "Coopealianza",
+    "BuyCode": 3289,
+    "SaleCode": 3290,
+    "Type": "Cooperativas"
+  },
+  {
+    "Id": 27,
+    "Name": "Coope-Ande N° 1 R.L",
+    "BuyCode": 3597,
+    "SaleCode": 3598,
+    "Type": "Cooperativas"
+  },
+  {
+    "Id": 28,
+    "Name": "Coopemex",
+    "BuyCode": 3199,
+    "SaleCode": "NULL",
+    "Type": "Cooperativas"
+  },
+  {
+    "Id": 29,
+    "Name": "Coopenae",
+    "BuyCode": 3200,
+    "SaleCode": 3234,
+    "Type": "Cooperativas"
+  },
+  {
+    "Id": 30,
+    "Name": "Coopeorotina R.L.",
+    "BuyCode": 3361,
+    "SaleCode": "NULL",
+    "Type": "Cooperativas"
+  },
+  {
+    "Id": 31,
+    "Name": "Cooperativa Coocique",
+    "BuyCode": 3197,
+    "SaleCode": 3231,
+    "Type": "Cooperativas"
+  },
+  {
+    "Id": 32,
+    "Name": "Cooperativa Credecoop",
+    "BuyCode": 3196,
+    "SaleCode": 3230,
+    "Type": "Cooperativas"
+  },
+  {
+    "Id": 33,
+    "Name": "Cooperativa San Marcos",
+    "BuyCode": 3198,
+    "SaleCode": 3232,
+    "Type": "Cooperativas"
+  },
+  {
+    "Id": 34,
+    "Name": "Coopesanramon R.L.",
+    "BuyCode": 3345,
+    "SaleCode": "NULL",
+    "Type": "Cooperativas"
+  },
+  {
+    "Id": 35,
+    "Name": "Coopeservidores R.L.",
+    "BuyCode": 3563,
+    "SaleCode": 3567,
+    "Type": "Cooperativas"
+  },
+  {
+    "Id": 36,
+    "Name": "Financiera Cafsa",
+    "BuyCode": 3193,
+    "SaleCode": 3227,
+    "Type": "Financieras"
+  },
+  {
+    "Id": 37,
+    "Name": "Financiera Comeca",
+    "BuyCode": 3189,
+    "SaleCode": 3223,
+    "Type": "Financieras"
+  },
+  {
+    "Id": 38,
+    "Name": "Financiera DESYFIN S.A.",
+    "BuyCode": 3341,
+    "SaleCode": 3342,
+    "Type": "Financieras"
+  },
+  {
+    "Id": 39,
+    "Name": "Financiera Gente S.A.",
+    "BuyCode": 3593,
+    "SaleCode": 3594,
+    "Type": "Financieras"
+  },
+  {
+    "Id": 40,
+    "Name": "Financiera Londres",
+    "BuyCode": 3188,
+    "SaleCode": "NULL",
+    "Type": "Financieras"
+  },
+  {
+    "Id": 41,
+    "Name": "Financiera Miravalles",
+    "BuyCode": 3192,
+    "SaleCode": "NULL",
+    "Type": "Financieras"
+  },
+  {
+    "Id": 42,
+    "Name": "Financiera Multivalores",
+    "BuyCode": 3190,
+    "SaleCode": "NULL",
+    "Type": "Financieras"
+  },
+  {
+    "Id": 43,
+    "Name": "INS Valores Puesto de Bolsa S.A.",
+    "BuyCode": 3549,
+    "SaleCode": 3550,
+    "Type": "Puestos de Bolsa"
+  },
+  {
+    "Id": 44,
+    "Name": "Interbolsa",
+    "BuyCode": 3281,
+    "SaleCode": "NULL",
+    "Type": "Puestos de Bolsa"
+  },
+  {
+    "Id": 45,
+    "Name": "Mutual Alajuela",
+    "BuyCode": 3194,
+    "SaleCode": 3228,
+    "Type": "Mutuales"
+  },
+  {
+    "Id": 46,
+    "Name": "Mutual Cartago",
+    "BuyCode": 3195,
+    "SaleCode": 3229,
+    "Type": "Mutuales"
+  },
+  {
+    "Id": 47,
+    "Name": "Mutual Valores Puesto de Bolsa",
+    "BuyCode": 22849,
+    "SaleCode": "NULL",
+    "Type": "Puestos de Bolsa"
+  },
+  {
+    "Id": 48,
+    "Name": "PB Inversiones SAMA",
+    "BuyCode": 23701,
+    "SaleCode": "NULL",
+    "Type": "Puestos de Bolsa"
+  },
+  {
+    "Id": 49,
+    "Name": "Popular Valores Puesto de Bolsa",
+    "BuyCode": 19728,
+    "SaleCode": "NULL",
+    "Type": "Puestos de Bolsa"
+  },
+  {
+    "Id": 50,
+    "Name": "Prival Bank (Costa Rica) S.A",
+    "BuyCode": 3191,
+    "SaleCode": 3225,
+    "Type": "Financieras"
+  },
+  {
+    "Id": 51,
+    "Name": "Puesto de Bolsa Aldesa Valores",
+    "BuyCode": 3204,
+    "SaleCode": 3278,
+    "Type": "Puestos de Bolsa"
+  },
+  {
+    "Id": 52,
+    "Name": "Scotiabank C.R.",
+    "BuyCode": 3187,
+    "SaleCode": 3221,
+    "Type": "Privada"
+  },
+  {
+    "Id": 53,
+    "Name": "Serviexpreso Money Transfer Casa de Cambio",
+    "BuyCode": 22964,
+    "SaleCode": "NULL",
+    "Type": "Casas de Cambio"
+  }
+]

@@ -1,0 +1,90 @@
+﻿Code,Action,Type,Bank
+3151,Compra,Privada,Banco BCT
+3152,Compra,Privada,Banco Davivienda (Costa Rica) S.A
+3153,Compra,Privada,Banco Citibank Costa Rica
+3154,Compra,Privada,Banco CMB
+3180,Compra,Privada,Banco Cathay
+3181,Compra,Privada,Banco Bac San José
+3182,Compra,Privada,Banco Uno
+3183,Compra,Privada,Banco Lafise
+3184,Compra,Privada,Banco Improsa
+3185,Compra,Privada,Banco Interfin
+3186,Compra,Privada,Banco Promerica
+3187,Compra,Privada,Scotiabank C.R.
+3566,Compra,Privada,Banco General Costa Rica S.A
+3146,Compra,Publica,Banco Crédito Agrícola de Cartago
+3148,Compra,Publica,Banco de Costa Rica
+3149,Compra,Publica,Banco Nacional
+3179,Compra,Publica,Banco Popular
+3201,Compra,Casas de Cambio,Casa Cambio Tele Dólar
+3203,Compra,Casas de Cambio,Casa Cambio Global Exchange
+3417,Compra,Casas de Cambio,Casa de cambio Interbolsa
+3556,Compra,Casas de Cambio,Casa Cambio Soluciones Monetarias S.A.
+19860,Compra,Casas de Cambio,Casa de Cambio Latin American Exchange
+22964,Compra,Casas de Cambio,Serviexpreso Money Transfer Casa de Cambio
+3196,Compra,Cooperativas,Cooperativa Credecoop
+3197,Compra,Cooperativas,Cooperativa Coocique
+3198,Compra,Cooperativas,Cooperativa San Marcos
+3199,Compra,Cooperativas,Coopemex
+3200,Compra,Cooperativas,Coopenae
+3289,Compra,Cooperativas,Coopealianza 
+3345,Compra,Cooperativas,Coopesanramon R.L.
+3361,Compra,Cooperativas,Coopeorotina R.L.
+3563,Compra,Cooperativas,Coopeservidores R.L.
+3597,Compra,Cooperativas,Coope-Ande N° 1 R.L
+3188,Compra,Financieras,Financiera Londres
+3189,Compra,Financieras,Financiera Comeca
+3190,Compra,Financieras,Financiera Multivalores
+3191,Compra,Financieras,Prival Bank (Costa Rica) S.A
+3192,Compra,Financieras,Financiera Miravalles
+3193,Compra,Financieras,Financiera Cafsa
+3341,Compra,Financieras,Financiera DESYFIN S.A.
+3593,Compra,Financieras,Financiera Gente S.A.
+3194,Compra,Mutuales,Mutual Alajuela
+3195,Compra,Mutuales,Mutual Cartago
+3204,Compra,Puestos de Bolsa,Puesto de Bolsa Aldesa Valores
+3281,Compra,Puestos de Bolsa,Interbolsa
+3337,Compra,Puestos de Bolsa,BN Valores Puesto Bolsa
+3427,Compra,Puestos de Bolsa,Acobo Puesto de Bolsa S.A.
+3549,Compra,Puestos de Bolsa,INS Valores Puesto de Bolsa S.A.
+3552,Compra,Puestos de Bolsa,BCT Valores Puesto de Bolsa S.A.
+19728,Compra,Puestos de Bolsa,Popular Valores Puesto de Bolsa
+22601,Compra,Puestos de Bolsa,BCR Valores Puesto de Bolsa
+22849,Compra,Puestos de Bolsa,Mutual Valores Puesto de Bolsa
+23701,Compra,Puestos de Bolsa,PB Inversiones SAMA
+3210,Venta,Privada,Banco BCT
+3211,Venta,Privada,Banco Davivienda (Costa Rica) S.A
+3212,Venta,Privada,Banco Citibank Costa Rica
+3214,Venta,Privada,Banco Cathay
+3215,Venta,Privada,Banco Bac San José
+3217,Venta,Privada,Banco Lafise
+3218,Venta,Privada,Banco Improsa
+3220,Venta,Privada,Banco Promerica
+3221,Venta,Privada,Scotiabank C.R.
+3568,Venta,Privada,Banco General Costa Rica S.A
+3206,Venta,Publica,Banco Crédito Agrícola de Cartago
+3207,Venta,Publica,Banco de Costa Rica
+3208,Venta,Publica,Banco Nacional
+3209,Venta,Publica,Banco Popular
+3271,Venta,Casas de Cambio,Casa Cambio Tele Dólar
+3277,Venta,Casas de Cambio,Casa Cambio Global Exchange
+19861,Venta,Casas de Cambio,Casa de Cambio Latin American Exchange
+3230,Venta,Cooperativas,Cooperativa Credecoop
+3231,Venta,Cooperativas,Cooperativa Coocique
+3232,Venta,Cooperativas,Cooperativa San Marcos
+3234,Venta,Cooperativas,Coopenae
+3290,Venta,Cooperativas,Coopealianza 
+3567,Venta,Cooperativas,Coopeservidores R.L.
+3598,Venta,Cooperativas,Coope-Ande N° 1 R.L
+3223,Venta,Financieras,Financiera Comeca
+3225,Venta,Financieras,Prival Bank (Costa Rica) S.A
+3227,Venta,Financieras,Financiera Cafsa
+3342,Venta,Financieras,Financiera DESYFIN S.A.
+3594,Venta,Financieras,Financiera Gente S.A.
+3228,Venta,Mutuales,Mutual Alajuela
+3229,Venta,Mutuales,Mutual Cartago
+3278,Venta,Mutuales,Puesto de Bolsa Aldesa Valores
+3338,Venta,Mutuales,BN Valores Puesto Bolsa
+3428,Venta,Mutuales,Acobo Puesto de Bolsa S.A.
+3550,Venta,Mutuales,INS Valores Puesto de Bolsa S.A.
+3553,Venta,Mutuales,BCT Valores Puesto de Bolsa S.A.

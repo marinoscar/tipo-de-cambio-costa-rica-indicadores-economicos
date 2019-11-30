@@ -15,7 +15,7 @@ namespace luval.tccr.indicadores
         public DataSet Execute(RequestParameters parameters)
         {
             var client = new IndicadoresEconomicos.wsindicadoreseconomicosSoapClient(IndicadoresEconomicos.wsindicadoreseconomicosSoapClient.EndpointConfiguration.wsindicadoreseconomicosSoap);
-            var result = client.ObtenerIndicadoresEconomicos("317", "10/11/2019", "29/11/2019", "Oscar Marin", "S", "oscar@marin.cr", "NCIR1R2RRM");
+            var result = client.ObtenerIndicadoresEconomicos("316", "10/11/2019", "29/11/2019", "Oscar Marin", "S", "oscar@marin.cr", "NCIR1R2RRM");
             XmlNode[] nodes = ((XmlNode[])result);
             var ds = new DataSet();
             ds.ReadXmlSchema(new StringReader(nodes[0].OuterXml));
