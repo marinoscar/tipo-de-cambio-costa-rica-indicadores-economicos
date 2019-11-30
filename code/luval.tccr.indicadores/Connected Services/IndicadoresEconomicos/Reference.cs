@@ -7,6 +7,9 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
+using System.Collections;
+using System.Collections.Generic;
+
 namespace IndicadoresEconomicos
 {
     
@@ -18,10 +21,10 @@ namespace IndicadoresEconomicos
         
         [System.ServiceModel.OperationContractAttribute(Action="http://ws.sdde.bccr.fi.cr/ObtenerIndicadoresEconomicos", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        IndicadoresEconomicos.ArrayOfXElement ObtenerIndicadoresEconomicos(string Indicador, string FechaInicio, string FechaFinal, string Nombre, string SubNiveles, string CorreoElectronico, string Token);
+        object ObtenerIndicadoresEconomicos(string Indicador, string FechaInicio, string FechaFinal, string Nombre, string SubNiveles, string CorreoElectronico, string Token);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://ws.sdde.bccr.fi.cr/ObtenerIndicadoresEconomicos", ReplyAction="*")]
-        System.Threading.Tasks.Task<IndicadoresEconomicos.ArrayOfXElement> ObtenerIndicadoresEconomicosAsync(string Indicador, string FechaInicio, string FechaFinal, string Nombre, string SubNiveles, string CorreoElectronico, string Token);
+        System.Threading.Tasks.Task<object> ObtenerIndicadoresEconomicosAsync(string Indicador, string FechaInicio, string FechaFinal, string Nombre, string SubNiveles, string CorreoElectronico, string Token);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://ws.sdde.bccr.fi.cr/ObtenerIndicadoresEconomicosXML", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
@@ -74,12 +77,12 @@ namespace IndicadoresEconomicos
         {
         }
         
-        public IndicadoresEconomicos.ArrayOfXElement ObtenerIndicadoresEconomicos(string Indicador, string FechaInicio, string FechaFinal, string Nombre, string SubNiveles, string CorreoElectronico, string Token)
+        public object ObtenerIndicadoresEconomicos(string Indicador, string FechaInicio, string FechaFinal, string Nombre, string SubNiveles, string CorreoElectronico, string Token)
         {
             return base.Channel.ObtenerIndicadoresEconomicos(Indicador, FechaInicio, FechaFinal, Nombre, SubNiveles, CorreoElectronico, Token);
         }
         
-        public System.Threading.Tasks.Task<IndicadoresEconomicos.ArrayOfXElement> ObtenerIndicadoresEconomicosAsync(string Indicador, string FechaInicio, string FechaFinal, string Nombre, string SubNiveles, string CorreoElectronico, string Token)
+        public System.Threading.Tasks.Task<object> ObtenerIndicadoresEconomicosAsync(string Indicador, string FechaInicio, string FechaFinal, string Nombre, string SubNiveles, string CorreoElectronico, string Token)
         {
             return base.Channel.ObtenerIndicadoresEconomicosAsync(Indicador, FechaInicio, FechaFinal, Nombre, SubNiveles, CorreoElectronico, Token);
         }
