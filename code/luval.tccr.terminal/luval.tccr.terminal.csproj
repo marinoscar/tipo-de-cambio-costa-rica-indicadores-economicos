@@ -21,6 +21,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\luval.tccr.indicadores\luval.tccr.indicadores.csproj" />
+    <ProjectReference Include="..\luval.tccr.storage\luval.tccr.storage.csproj" />
   </ItemGroup>
 
 </Project>
