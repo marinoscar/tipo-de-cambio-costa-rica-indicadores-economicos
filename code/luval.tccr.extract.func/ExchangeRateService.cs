@@ -10,9 +10,10 @@ namespace luval.tccr.extract.func
     {
         private static ILogger _localLogger;
         //Production cron -> "0 6-18/2 * * 1-5"
+        //Test cron -> "* * * * *"
 
         [FunctionName("ExchangeRateService")]
-        public static void Run([TimerTrigger("* * * * *")]TimerInfo myTimer, ILogger log)
+        public static void Run([TimerTrigger("0 6-18/2 * * 1-5")]TimerInfo myTimer, ILogger log)
         {
             _localLogger = log;
             _localLogger.LogInformation(string.Format("Starting the exececution of the function"));
