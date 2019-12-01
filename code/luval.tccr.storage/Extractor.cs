@@ -38,11 +38,14 @@ namespace luval.tccr.storage
         protected IEnumerable<ExchangeRate> DoExtract(DateTime startDate, DateTime endDate, List<Bank> banks)
         {
             var exchangeRates = new List<ExchangeRate>();
+            var isEmptyDate = startDate.Year < DateTime.Today.AddYears(-3).Year;
             foreach (var bank in banks)
             {
-                OnStatusMessage(string.Format("Bank: {0} # {1} of {2}", bank.Name, banks.IndexOf(bank) + 1, banks.Count));
-                if (startDate.Year <= 1983)
+                if (isEmptyDate)
                     startDate = _exchangeRateRepository.GetLastExtractDateByBankId(bank.Id);
+                //In case the startDate is incorrect we fix the problem
+                if (startDate > endDate) startDate = endDate;
+                OnStatusMessage(string.Format("Bank: {0} SD: {1} ED: {2} # {3} of {4}", bank.Name, startDate.ToShortDateString(), endDate.ToShortDateString(), banks.IndexOf(bank) + 1, banks.Count));
                 var newRates = DoExtract(bank, startDate, endDate);
                 exchangeRates.AddRange(newRates);
             }
@@ -56,16 +59,26 @@ namespace luval.tccr.storage
         }
 
         
+        public int DoUpsert()
+        {
+            var rates = DoExtract();
+            return UpsertRates(rates);
+        }
 
         public int BatchInsert(DateTime startDate, DateTime endDate, int monthIncrement)
         {
-            var count = 0;
             var banks = _bankRepo.GetBanks();
-            while(startDate <= endDate)
+            return BatchInsert(banks, startDate, endDate, monthIncrement);
+        }
+
+        public int BatchInsert(IEnumerable<Bank> banks, DateTime startDate, DateTime endDate, int monthIncrement)
+        {
+            var count = 0;
+            while (startDate <= endDate)
             {
                 OnStatusMessage(string.Format("\nEXTRACTING FROM {0} TO {1}\n", startDate.ToShortDateString(), startDate.AddMonths(monthIncrement).ToShortDateString()));
                 var startTs = DateTime.UtcNow;
-                var rates = DoExtract(startDate, startDate.AddMonths(monthIncrement), banks);
+                var rates = DoExtract(startDate, startDate.AddMonths(monthIncrement), banks.ToList());
                 count += _exchangeRateRepository.UpsertRates(rates);
                 startDate = startDate.AddMonths(monthIncrement);
                 OnStatusMessage(string.Format("{0} rates inserted in {1}", rates.Count(), DateTime.UtcNow.Subtract(startTs)));

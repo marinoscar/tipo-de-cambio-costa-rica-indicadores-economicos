@@ -18,15 +18,10 @@ namespace luval.tccr.storage
         public int UpsertRates(IEnumerable<ExchangeRate> rates)
         {
             var count = 0;
-            Database.WithCommand((cmd) =>
+            foreach (var rate in rates)
             {
-                cmd.CommandType = CommandType.Text;
-                foreach (var rate in rates)
-                {
-                    cmd.CommandText = rate.ToSql();
-                    count += cmd.ExecuteNonQuery();
-                }
-            });
+                count += Database.ExecuteNonQuery(rate.ToSql());
+            }
             return count;
         }
 

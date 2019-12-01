@@ -25,11 +25,11 @@ namespace luval.tccr.storage
             UtcLastUpdateOn = DateTime.UtcNow;
         }
 
-        public ExchangeRate(Bank bank, DateTime date, double buy, double sale) : this(bank.Id, date, buy, sale)
+        public ExchangeRate(Bank bank, DateTime date, double? buy, double? sale) : this(bank.Id, date, buy, sale)
         {
         }
 
-        public ExchangeRate(int bankId, DateTime date, double buy, double sale)
+        public ExchangeRate(int bankId, DateTime date, double? buy, double? sale)
         {
             var culture = CultureInfo.GetCultureInfo("es-ES");
             UtcLastUpdateOn = DateTime.UtcNow;

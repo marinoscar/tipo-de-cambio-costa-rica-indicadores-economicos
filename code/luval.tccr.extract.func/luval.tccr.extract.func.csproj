@@ -1,15 +1,12 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
-
   <PropertyGroup>
-    <OutputType>Exe</OutputType>
     <TargetFramework>netcoreapp2.2</TargetFramework>
+    <AzureFunctionsVersion>v2</AzureFunctionsVersion>
   </PropertyGroup>
-
   <ItemGroup>
     <None Remove="config.json" />
     <None Remove="config.private.json" />
   </ItemGroup>
-
   <ItemGroup>
     <Content Include="config.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
@@ -18,18 +15,27 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
   </ItemGroup>
-
   <ItemGroup>
-    <PackageReference Include="System.Data.SqlClient" Version="4.7.0" />
+    <PackageReference Include="Microsoft.NET.Sdk.Functions" Version="1.0.29" />
+    <PackageReference Include="Newtonsoft.Json" Version="12.0.3" />
+    <PackageReference Include="System.Data.SqlClient" Version="4.6.1" />
     <PackageReference Include="System.ServiceModel.Duplex" Version="4.6.0" />
     <PackageReference Include="System.ServiceModel.Http" Version="4.6.0" />
     <PackageReference Include="System.ServiceModel.NetTcp" Version="4.6.0" />
     <PackageReference Include="System.ServiceModel.Security" Version="4.6.0" />
   </ItemGroup>
-
   <ItemGroup>
+    <ProjectReference Include="..\luval.tccr.config\luval.tccr.config.csproj" />
     <ProjectReference Include="..\luval.tccr.indicadores\luval.tccr.indicadores.csproj" />
     <ProjectReference Include="..\luval.tccr.storage\luval.tccr.storage.csproj" />
   </ItemGroup>
-
+  <ItemGroup>
+    <None Update="host.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="local.settings.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CopyToPublishDirectory>Never</CopyToPublishDirectory>
+    </None>
+  </ItemGroup>
 </Project>

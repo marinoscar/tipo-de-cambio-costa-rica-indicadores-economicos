@@ -3,13 +3,15 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.29102.190
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "luval.tccr.indicadores", "luval.tccr.indicadores\luval.tccr.indicadores.csproj", "{3F104B1D-F402-433E-9404-C550954913B9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "luval.tccr.indicadores", "luval.tccr.indicadores\luval.tccr.indicadores.csproj", "{3F104B1D-F402-433E-9404-C550954913B9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "luval.tccr.terminal", "luval.tccr.terminal\luval.tccr.terminal.csproj", "{5EA0C129-EB1C-4F8D-9372-C89E445DE189}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "luval.tccr.terminal", "luval.tccr.terminal\luval.tccr.terminal.csproj", "{5EA0C129-EB1C-4F8D-9372-C89E445DE189}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "luval.tccr.storage", "luval.tccr.storage\luval.tccr.storage.csproj", "{3CE10301-1291-499A-A3B3-B6B04CF354C9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "luval.tccr.storage", "luval.tccr.storage\luval.tccr.storage.csproj", "{3CE10301-1291-499A-A3B3-B6B04CF354C9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "luval.tccr.config", "luval.tccr.config\luval.tccr.config.csproj", "{46D319BF-D5D9-4FF9-8A57-A13FFD1A3152}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "luval.tccr.config", "luval.tccr.config\luval.tccr.config.csproj", "{46D319BF-D5D9-4FF9-8A57-A13FFD1A3152}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "luval.tccr.extract.func", "luval.tccr.extract.func\luval.tccr.extract.func.csproj", "{27076108-1F11-423A-AC3E-A00B2BBD2205}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{46D319BF-D5D9-4FF9-8A57-A13FFD1A3152}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{46D319BF-D5D9-4FF9-8A57-A13FFD1A3152}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{46D319BF-D5D9-4FF9-8A57-A13FFD1A3152}.Release|Any CPU.Build.0 = Release|Any CPU
+		{27076108-1F11-423A-AC3E-A00B2BBD2205}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{27076108-1F11-423A-AC3E-A00B2BBD2205}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{27076108-1F11-423A-AC3E-A00B2BBD2205}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{27076108-1F11-423A-AC3E-A00B2BBD2205}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

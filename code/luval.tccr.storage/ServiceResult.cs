@@ -6,7 +6,7 @@ namespace luval.tccr.storage
 {
     public class ServiceResult
     {
-        public double Value { get; set; }
+        public double? Value { get; set; }
         public DateTime Date { get; set; }
     }
 }

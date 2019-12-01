@@ -31,10 +31,16 @@ namespace luval.tccr.storage
                 res.Add(new ServiceResult()
                 {
                     Date = Convert.ToDateTime(row["DES_FECHA"]),
-                    Value = Convert.ToDouble(row["NUM_VALOR"])
+                    Value = ToDouble(row["NUM_VALOR"])
                 });
             }
             return res;
+        }
+
+        private double? ToDouble(object obj)
+        {
+            if (obj == null || DBNull.Value.Equals(obj)) return null;
+            return Convert.ToDouble(obj);
         }
     }
 }
