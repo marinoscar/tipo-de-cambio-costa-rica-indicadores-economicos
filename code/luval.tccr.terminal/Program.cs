@@ -9,13 +9,13 @@ namespace luval.tccr.terminal
     {
         static void Main(string[] args)
         {
+            Console.ForegroundColor = ConsoleColor.White;
             Console.Clear();
             var extractor = new Extractor();
             extractor.StatusMessage += Extractor_StatusMessage;
-            var banks = new List<Bank>(new[] { new Bank() { Id = 99, Name = "Banco Central de Costa Rica", BuyCode = 317, SaleCode = 318, Type = "Publico" } });
+            //var banks = new List<Bank>(new[] { new Bank() { Id = 99, Name = "Banco Central de Costa Rica", BuyCode = 317, SaleCode = 318, Type = "Publico" } });
             try
             {
-                //extractor.BatchInsert(banks, DateTime.Today.Date.AddYears(-10), DateTime.Today, 3);
                 extractor.DoUpsert();
             }
             catch (Exception ex)

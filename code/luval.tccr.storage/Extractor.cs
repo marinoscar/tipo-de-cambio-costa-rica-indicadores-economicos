@@ -31,7 +31,7 @@ namespace luval.tccr.storage
 
         public IEnumerable<ExchangeRate> DoExtract(DateTime startDate, DateTime endDate)
         {
-            var banks = _bankRepo.GetBanks();
+            var banks = _bankRepo.GetActiveBanks();
             return DoExtract(startDate, endDate, banks);
         }
 

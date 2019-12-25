@@ -11,5 +11,7 @@ namespace luval.tccr.storage
         public int BuyCode { get; set; }
         public int SaleCode { get; set; }
         public string Type { get; set; }
+        public bool IsActive { get; set; }
+        public string Url { get; set; }
     }
 }
