@@ -74,7 +74,9 @@ WHERE
 
 ".FormatSql(date, ToWorkDate(date.AddDays(-1)), ToWorkDate(date.AddDays(-7)), ToWorkDate(date.AddMonths(-1)), bankSql);
 
-            return Database.ExecuteToEntityList<BankRate>(sql + bankSql);
+            var rates = Database.ExecuteToEntityList<BankRate>(sql + bankSql).ToList();
+            rates.ForEach(i => i.ApplyFormats());
+            return rates;
 
         }
 

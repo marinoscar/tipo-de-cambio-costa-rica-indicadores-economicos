@@ -3,13 +3,20 @@
 }
 
 <div class="text-center">
-    <h1 class="display-4">Bienvenidos</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+    <div class="jumbotron jumbotron-fluid">
+        <div class="container">
+            <h1 class="display-4">Tipo de Cambio para hoy</h1>
+            <p class="lead">El tipo de cambio de referencia del <a href="https://www.bccr.fi.cr/seccion-indicadores-economicos/tipos-de-cambio" target="_">Banco Central</a> para hoy @DateTime.Today.Day de @DateTime.Today.ToString("MMMM", new System.Globalization.CultureInfo("es-CR")) del @DateTime.Today.Year es para la venta <strong><span id="sale-rate-bccr"></span></strong> y para la compra es de <strong><span id="buy-rate-bccr"></span></strong></p>
+        </div>
+    </div>
 </div>
 @section Scripts{
     <script>
         $(document).ready(function () {
             $.getJSON('/home/GetBancoCentral', function (result) {
+                $('#sale-rate-bccr').html(result.formattedSaleRate);
+                $('#buy-rate-bccr').html(result.formattedBuyRate);
+
                 console.log('Bank: ' + result.bankName + ' Date: ' + result.date + ' Buy: ' + result.buyRate);
             });
             console.log("ready!");
