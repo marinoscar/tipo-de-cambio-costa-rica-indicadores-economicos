@@ -1,0 +1,19 @@
+﻿@{
+    ViewData["Title"] = "Inicio";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Bienvenidos</h1>
+    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+</div>
+@section Scripts{
+    <script>
+        $(document).ready(function () {
+            $.getJSON('/home/GetBancoCentral', function (result) {
+                console.log('Bank: ' + result.bankName + ' Date: ' + result.date + ' Buy: ' + result.buyRate);
+            });
+            console.log("ready!");
+        });
+    </script>
+
+}

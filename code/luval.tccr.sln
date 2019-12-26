@@ -13,7 +13,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "luval.tccr.config", "luval.
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "luval.tccr.extract.func", "luval.tccr.extract.func\luval.tccr.extract.func.csproj", "{27076108-1F11-423A-AC3E-A00B2BBD2205}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "luval.tccr.web", "luval.tccr.web\luval.tccr.web.csproj", "{F17132DB-EC61-4529-9883-4FABEA8BF177}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "luval.tccr.web", "luval.tccr.web\luval.tccr.web.csproj", "{74A91EDF-7276-4FF9-BB65-9749979B691A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -41,10 +41,10 @@ Global
 		{27076108-1F11-423A-AC3E-A00B2BBD2205}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{27076108-1F11-423A-AC3E-A00B2BBD2205}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{27076108-1F11-423A-AC3E-A00B2BBD2205}.Release|Any CPU.Build.0 = Release|Any CPU
-		{F17132DB-EC61-4529-9883-4FABEA8BF177}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{F17132DB-EC61-4529-9883-4FABEA8BF177}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{F17132DB-EC61-4529-9883-4FABEA8BF177}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{F17132DB-EC61-4529-9883-4FABEA8BF177}.Release|Any CPU.Build.0 = Release|Any CPU
+		{74A91EDF-7276-4FF9-BB65-9749979B691A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{74A91EDF-7276-4FF9-BB65-9749979B691A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{74A91EDF-7276-4FF9-BB65-9749979B691A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{74A91EDF-7276-4FF9-BB65-9749979B691A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

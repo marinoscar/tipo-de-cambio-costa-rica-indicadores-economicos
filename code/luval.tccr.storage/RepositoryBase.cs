@@ -25,5 +25,12 @@ namespace luval.tccr.storage
         {
             return new Database(() => new SqlConnection(ConfigManager.Setting["ConnectionString"]));
         }
+
+        public DateTime ToWorkDate(DateTime dt)
+        {
+            if (dt.Date.DayOfWeek == DayOfWeek.Saturday) return dt.AddDays(-1);
+            if (dt.Date.DayOfWeek == DayOfWeek.Sunday) return dt.AddDays(-2);
+            return dt;
+        }
     }
 }
