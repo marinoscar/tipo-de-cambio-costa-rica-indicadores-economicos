@@ -28,7 +28,7 @@ namespace luval.tccr.web.Controllers
             return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
         }
 
-        [HttpGet]
+        [HttpGet, OutputCache(Duration = 3600)]
         public JsonResult GetBancoCentral()
         {
             var exchangeRepo = new ExchangeRateRepository();

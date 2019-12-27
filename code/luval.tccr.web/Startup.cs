@@ -32,6 +32,7 @@ namespace luval.tccr.web
             });
 
             services.AddApplicationInsightsTelemetry();
+            services.AddOutputCaching();
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
         }
 
@@ -52,7 +53,7 @@ namespace luval.tccr.web
             app.UseHttpsRedirection();
             app.UseStaticFiles();
             app.UseCookiePolicy();
-
+            app.UseOutputCaching();
             app.UseMvc(routes =>
             {
                 routes.MapRoute(

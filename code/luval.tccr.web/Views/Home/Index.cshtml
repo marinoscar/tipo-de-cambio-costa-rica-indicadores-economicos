@@ -17,14 +17,54 @@
                 <a href="">Bac San Jose</a>
             </div>
             <div class="card-body">
-                <div class="row">
-                    <div class="col-xs-6">
-                        <span class="card-title">575.25</span>
-                        <span class="badge badge-success">+1.72 (0.53%)</span>
-                    </div>
+                <div class="table-responsive">
+                    <table class="table table-borderless table-sm">
+                        <thead>
+                            <tr>
+                                <th scope="col">Compra</th>
+                                <th scope="col">Venta</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <span class="card-title h4 font-weight-bolder">575.25</span>
+                                    <span class="badge badge-success">+1.72 (0.53%) <i class="fas fa-chevron-down"></i></span>
+
+                                </td>
+                                <td>
+                                    <span class="card-title h4 font-weight-bolder">585.25</span>
+                                    <span class="badge badge-danger">+1.72 (0.53%) <i class="fas fa-chevron-up"></i></span>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
                 </div>
-                <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                <a href="#" class="btn btn-primary">Go somewhere</a>
+                <div class="chart-container">
+                    <canvas id="chart-1"></canvas>
+                </div>
+            </div>
+            <div class="card-footer text-muted small">
+                <div>
+                    <table class="table table-borderless table-sm">
+                        <thead>
+                            <tr>
+                                <th>Compra</th>
+                                <th>Venta</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>semana pasada <span id="buy-prev-day-1">+1.72 (0.53%) <i class="fas fa-chevron-down"></i></span></td>
+                                <td>semana pasada <span id="sale-prev-day-1">+1.72 (0.53%) <i class="fas fa-chevron-down"></i></span></td>
+                            </tr>
+                            <tr>
+                                <td>mes pasado <span id="buy-prev-day-1">+1.72 (0.53%) <i class="fas fa-chevron-down"></i></span></td>
+                                <td>mes pasado <span id="sale-prev-day-1">+1.72 (0.53%) <i class="fas fa-chevron-down"></i></span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
             </div>
         </div>
     </div>
@@ -38,6 +78,7 @@
 
                 console.log('Bank: ' + result.bankName + ' Date: ' + result.date + ' Buy: ' + result.buyRate);
             });
+            chartEngine.create('chart-1', chartEngine.categoriesSample, chartEngine.buySample, chartEngine.saleSample);
             console.log("ready!");
         });
     </script>
