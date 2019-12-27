@@ -4,6 +4,66 @@
 // Write your JavaScript code.
 
 
+var cardHtmlTemplate = `
+    <div id="card-<%= bankId %>" class="col-md-6 col-xs-12" >
+        <div class="card">
+            <div class="card-header">
+                <a href="<%= bankUrl %>"><%= bankName %></a>
+            </div>
+            <div class="card-body">
+                <div class="table-responsive">
+                    <table class="table table-borderless table-sm">
+                        <thead>
+                            <tr>
+                                <th scope="col">Compra</th>
+                                <th scope="col">Venta</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <span class="card-title h4 font-weight-bolder"><%= formattedBuyRate %></span>
+                                    <span class="badge <%= formattedPrevWeekBuyRateGrowthClass %> "><%= formattedPrevWeekBuyRateGrowth %> <i class="fas fa-chevron-down"></i></span>
+
+                                </td>
+                                <td>
+                                    <span class="card-title h4 font-weight-bolder"><%= formattedSaleRate %></span>
+                                    <span class="badge <%= formattedPrevWeekSaleRateGrowthClass %> "><%= formattedPrevWeekBuyRateGrowth %> <i class="fas fa-chevron-up"></i></span>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="chart-container">
+                    <canvas id="chart-<%= bankId %>"></canvas>
+                </div>
+            </div>
+            <div class="card-footer text-muted small">
+                <div>
+                    <table class="table table-borderless table-sm">
+                        <thead>
+                            <tr>
+                                <th>Compra</th>
+                                <th>Venta</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>semana pasada <span id="buy-prev-day-1">+1.72 (0.53%) <i class="fas fa-chevron-down"></i></span></td>
+                                <td>semana pasada <span id="sale-prev-day-1">+1.72 (0.53%) <i class="fas fa-chevron-down"></i></span></td>
+                            </tr>
+                            <tr>
+                                <td>mes pasado <span id="buy-prev-day-1">+1.72 (0.53%) <i class="fas fa-chevron-down"></i></span></td>
+                                <td>mes pasado <span id="sale-prev-day-1">+1.72 (0.53%) <i class="fas fa-chevron-down"></i></span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div >
+`
+
 var chartEngine = {
     create: function (canvasId, categories, buyData, saleData) {
         var canvas = document.getElementById(canvasId);

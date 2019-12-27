@@ -29,6 +29,13 @@
 
 
   <ItemGroup>
+    <Reference Include="luval.data.core">
+      <HintPath>..\..\libraries\luval.data\luval.data.core.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+
+  <ItemGroup>
     <WCFMetadata Include="Connected Services" />
   </ItemGroup>
 

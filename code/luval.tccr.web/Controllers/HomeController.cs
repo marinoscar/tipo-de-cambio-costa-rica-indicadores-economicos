@@ -35,5 +35,15 @@ namespace luval.tccr.web.Controllers
             return Json(exchangeRepo.GetCentralBankRate(DateTime.Today.Date));
 
         }
+
+        [HttpGet, OutputCache(Duration = 3600)]
+        public JsonResult GetBankData()
+        {
+            var exchangeRepo = new ExchangeRateRepository();
+            var rates = exchangeRepo.GetActiveBanksRatesByDate(DateTime.Today.Date).Where(i => i.BankId != 99).ToList();
+            return Json(new BankRateModelView() {
+                Rates = rates, DateControl = DateTime.Now.ToString("yyyy-MM-dd hh:mm:ss")
+            });
+        }
     }
 }

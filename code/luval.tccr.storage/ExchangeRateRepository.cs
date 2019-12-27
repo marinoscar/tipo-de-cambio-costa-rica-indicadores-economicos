@@ -57,6 +57,7 @@ namespace luval.tccr.storage
 SELECT 
 	 Bank.Id As BankId
 	,Bank.Name As BankName
+    ,Bank.Url As BankUrl
 	,ER.SaleRate
 	,ER.BuyRate
 	,(SELECT SaleRate FROM ExchangeRate WHERE BankId = Bank.Id And Date = {1} ) As PrevDaySaleRate
@@ -74,10 +75,23 @@ WHERE
 
 ".FormatSql(date, ToWorkDate(date.AddDays(-1)), ToWorkDate(date.AddDays(-7)), ToWorkDate(date.AddMonths(-1)), bankSql);
 
-            var rates = Database.ExecuteToEntityList<BankRate>(sql + bankSql).ToList();
-            rates.ForEach(i => i.ApplyFormats());
+            var rates = Database.ExecuteToEntityList<BankRate>(sql + bankSql).OrderBy(i => i.BuyRate).ToList();
+            foreach(var rate in rates)
+            {
+                rate.CalculateValues();
+                if (rate.BankId == 99) continue;
+                var historyRates = GetRatesByBankandDates(rate.BankId, rate.Date.Date.AddDays(-90), rate.Date.Date);
+                rate.Labels = historyRates.Select(i => i.Date.ToString("d M, yy")).ToList();
+                rate.PastBuyRates = historyRates.Select(i => i.BuyRate.Value).ToList();
+                rate.PastSaleRates = historyRates.Select(i => i.SaleRate.Value).ToList();
+            }
             return rates;
+        }
 
+        public List<ExchangeRate> GetRatesByBankandDates(int bankId, DateTime start, DateTime end)
+        {
+            var sql = "SELECT * FROM ExchangeRate WHERE BankId = {0} And Date >= {1} And Date <= {2}".FormatSql(bankId, start, end);
+            return Database.ExecuteToEntityList<ExchangeRate>(sql);
         }
 
     }
