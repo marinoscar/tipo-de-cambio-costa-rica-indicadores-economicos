@@ -8,7 +8,7 @@ var cardHtmlTemplate = `
     <div id="card-<%= bankId %>" class="col-md-6 col-xs-12" >
         <div class="card">
             <div class="card-header">
-                <a href="<%= bankUrl %>"><%= bankName %></a>
+                <strong><a href="<%= bankUrl %>"><%= bankName %></a></strong>
             </div>
             <div class="card-body">
                 <div class="table-responsive">
@@ -22,13 +22,31 @@ var cardHtmlTemplate = `
                         <tbody>
                             <tr>
                                 <td>
-                                    <span class="card-title h4 font-weight-bolder"><%= formattedBuyRate %></span>
-                                    <span class="badge <%= formattedPrevDayBuyRateGrowthClass %> "><%= formattedPrevDayBuyRateGrowth %> <i class="<%= formattedPrevDayBuyRateGrowthIconClass %>"></i></span>
+                                    <table>
+                                        <tr>
+                                            <td>
+                                                <span class="card-title h4 font-weight-bolder"><%= formattedBuyRate %></span>
+                                            </td>
+                                            <td>
+                                                <span class="badge <%= formattedPrevDayBuyRateGrowthClass %> "><%= formattedPrevDayBuyRateGrowth %> <i class="<%= formattedPrevDayBuyRateGrowthIconClass %>"></i></span>
+                                                <p style="font-size:7pt">Variación en 24hrs</p>
+                                            </td>
+                                        </tr>
+                                    </table>
 
                                 </td>
                                 <td>
-                                    <span class="card-title h4 font-weight-bolder"><%= formattedSaleRate %></span>
-                                    <span class="badge <%= formattedPrevDaySaleRateGrowthClass %> "><%= formattedPrevDayBuyRateGrowth %> <i class="<%= formattedPrevDaySaleRateGrowthIconClass %>"></i></span>
+                                    <table>
+                                        <tr>
+                                            <td>
+                                                <span class="card-title h4 font-weight-bolder"><%= formattedSaleRate %></span>
+                                            </td>
+                                            <td>
+                                                <span class="badge <%= formattedPrevDaySaleRateGrowthClass %> "><%= formattedPrevDayBuyRateGrowth %> <i class="<%= formattedPrevDaySaleRateGrowthIconClass %>"></i></span>
+                                                <p style="font-size:7pt">Variación en 24hrs</p>
+                                            </td>
+                                        </tr>
+                                    </table>
                                 </td>
                             </tr>
                         </tbody>
@@ -40,21 +58,21 @@ var cardHtmlTemplate = `
             </div>
             <div class="card-footer text-muted small">
                 <div>
-                    <table class="table table-borderless table-sm">
+                    <table class="table table-borderless table-sm" style="font-size:8pt">
                         <thead>
                             <tr>
-                                <th>Compra</th>
-                                <th>Venta</th>
+                                <th>Variación Compra</th>
+                                <th>Variación Venta</th>
                             </tr>
                         </thead>
                         <tbody>
                             <tr>
-                                <td>semana pasada <span id="buy-prev-day-1"><%= formattedPrevWeekBuyRateGrowth %><i class="<%= formattedPrevWeekBuyRateGrowthIconClass %>"></i></span></td>
-                                <td>semana pasada <span id="sale-prev-day-1"><%= formattedPrevWeekSaleRateGrowth %><i class="<%= formattedPrevWeekSaleRateGrowthIconClass %>"></i></span></td>
+                                <td>hace una semana <span id="buy-prev-day-1"><%= formattedPrevWeekBuyRate %> <%= formattedPrevWeekBuyRateGrowth %><i class="<%= formattedPrevWeekBuyRateGrowthIconClass %>"></i></span></td>
+                                <td>hace una semana <span id="sale-prev-day-1"><%= formattedPrevWeekSaleRate %> <%= formattedPrevWeekSaleRateGrowth %><i class="<%= formattedPrevWeekSaleRateGrowthIconClass %>"></i></span></td>
                             </tr>
                             <tr>
-                                <td>mes pasado <span id="buy-prev-day-1"><%= formattedPrevMonthBuyRateGrowth %><i class="<%= formattedPrevMonthBuyRateGrowthIconClass %>"></i></span></td>
-                                <td>mes pasado <span id="sale-prev-day-1"><%= formattedPrevMonthSaleRateGrowth %><i class="<%= formattedPrevMonthSaleRateGrowthIconClass %>"></i></span></td>
+                                <td>hace un mes <span id="buy-prev-day-1"><%= formattedPrevMonthBuyRate %> <%= formattedPrevMonthBuyRateGrowth %><i class="<%= formattedPrevMonthBuyRateGrowthIconClass %>"></i></span></td>
+                                <td>hace un mes <span id="sale-prev-day-1"><%= formattedPrevMonthSaleRate %> <%= formattedPrevMonthSaleRateGrowth %><i class="<%= formattedPrevMonthSaleRateGrowthIconClass %>"></i></span></td>
                             </tr>
                         </tbody>
                     </table>
@@ -109,12 +127,14 @@ var chartEngine = {
                     {
                         label: 'Compra',
                         backgroundColor: '#007bff',
+                        boderColor: '#007bff',
                         data: buyData,
                         fill: false
                     },
                     {
                         label: 'Venta',
                         backgroundColor: '#17a2b8',
+                        boderColor: '#17a2b8',
                         data: saleData,
                         fill: false
                     }
@@ -124,7 +144,7 @@ var chartEngine = {
                 responsive: true,
                 title: {
                     display: true,
-                    text: 'Tipo de Cambio en los ultimos 90 dias'
+                    text: 'Variación en los últimos 90 días'
                 },
                 scales: {
                     xAxes: [{

@@ -5,73 +5,38 @@
 <div class="text-center">
     <div class="jumbotron jumbotron-fluid">
         <div class="container">
-            <h1 class="display-4">Tipo de Cambio</h1>
-            <p class="lead">El tipo de cambio de referencia para el dólar <a href="https://www.bccr.fi.cr/seccion-indicadores-economicos/tipos-de-cambio" target="_">Banco Central</a> para el @DateTime.Today.Day de @DateTime.Today.ToString("MMMM", new System.Globalization.CultureInfo("es-CR")) del @DateTime.Today.Year es para la venta <strong><span id="sale-rate-bccr"></span></strong> y para la compra es de <strong><span id="buy-rate-bccr"></span></strong></p>
+            <h2 class="display-4">Tipo de Cambio</h2>
+            <p class="lead">El tipo de cambio de referencia para el dólar <a href="https://www.bccr.fi.cr/seccion-indicadores-economicos/tipos-de-cambio" target="_">Banco Central</a> para el @DateTime.Today.Day de @DateTime.Today.ToString("MMMM", new System.Globalization.CultureInfo("es-CR")) del @DateTime.Today.Year es el siguiente</p>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <td>
+                            Compra
+                        </td>
+                        <td>
+                            Venta
+                        </td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            <strong><span id="buy-rate-bccr"></span></strong>
+                        </td>
+                        <td>
+                            <strong><span id="sale-rate-bccr"></span></strong>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <p>A continuación el tipo de cambio y tendencias para los bancos del sistema nacional</p>
         </div>
     </div>
 </div>
 <div id="work-area">
 
 </div>
-@*<div class="row">
-    <div class="col-md-6 col-xs-12">
-        <div class="card">
-            <div class="card-header">
-                <a href="">Bac San Jose</a>
-            </div>
-            <div class="card-body">
-                <div class="table-responsive">
-                    <table class="table table-borderless table-sm">
-                        <thead>
-                            <tr>
-                                <th scope="col">Compra</th>
-                                <th scope="col">Venta</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>
-                                    <span class="card-title h4 font-weight-bolder">575.25</span>
-                                    <span class="badge badge-success">+1.72 (0.53%) <i class="fas fa-chevron-down"></i></span>
 
-                                </td>
-                                <td>
-                                    <span class="card-title h4 font-weight-bolder">585.25</span>
-                                    <span class="badge badge-danger">+1.72 (0.53%) <i class="fas fa-chevron-up"></i></span>
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-                <div class="chart-container">
-                    <canvas id="chart-1"></canvas>
-                </div>
-            </div>
-            <div class="card-footer text-muted small">
-                <div>
-                    <table class="table table-borderless table-sm">
-                        <thead>
-                            <tr>
-                                <th>Compra</th>
-                                <th>Venta</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>semana pasada <span id="buy-prev-day-1">+1.72 (0.53%) <i class="fas fa-chevron-down"></i></span></td>
-                                <td>semana pasada <span id="sale-prev-day-1">+1.72 (0.53%) <i class="fas fa-chevron-down"></i></span></td>
-                            </tr>
-                            <tr>
-                                <td>mes pasado <span id="buy-prev-day-1">+1.72 (0.53%) <i class="fas fa-chevron-down"></i></span></td>
-                                <td>mes pasado <span id="sale-prev-day-1">+1.72 (0.53%) <i class="fas fa-chevron-down"></i></span></td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>*@
 @section Scripts{
     <script>
         $(document).ready(function () {

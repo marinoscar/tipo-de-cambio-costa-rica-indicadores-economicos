@@ -42,7 +42,7 @@ namespace luval.tccr.web.Controllers
             var exchangeRepo = new ExchangeRateRepository();
             var rates = exchangeRepo.GetActiveBanksRatesByDate(GetTodayDateTime()).Where(i => i.BankId != 99).ToList();
             return Json(new BankRateModelView() {
-                Rates = rates, DateControl = DateTime.UtcNow.AddHours(-6).ToString("yyyy-MM-dd hh:mm:ss")
+                Rates = rates, DateControl = DateTime.UtcNow.AddHours(-6).ToString("yyyy-MM-dd HH:mm:ss")
             });
         }
 
