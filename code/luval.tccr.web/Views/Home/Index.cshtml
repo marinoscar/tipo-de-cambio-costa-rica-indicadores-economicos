@@ -10,6 +10,9 @@
         </div>
     </div>
 </div>
+<div id="work-area">
+
+</div>
 <div class="row">
     <div class="col-md-6 col-xs-12">
         <div class="card">
@@ -78,6 +81,7 @@
 
                 console.log('Bank: ' + result.bankName + ' Date: ' + result.date + ' Buy: ' + result.buyRate);
             });
+            templateEngine.processData();
             //chartEngine.create('chart-1', chartEngine.categoriesSample, chartEngine.buySample, chartEngine.saleSample);
             console.log("ready!");
         });

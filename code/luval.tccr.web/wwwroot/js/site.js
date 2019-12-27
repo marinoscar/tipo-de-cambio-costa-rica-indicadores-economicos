@@ -64,6 +64,39 @@ var cardHtmlTemplate = `
     </div >
 `
 
+var templateEngine = {
+    getCard: function (data) {
+        var compiled = _.template(cardHtmlTemplate);
+        return compiled(data);
+    },
+    drawHtml: function (data, onComplete) {
+        var root = $('#work-area');
+        var html = '<div class="row">'
+        var cardCount = 0;
+        for (i = 0; i < data.rates.length; i++) {
+            html = html + '\n' + templateEngine.getCard(data.rates[i]);
+            cardCount++;
+            if (cardCount > 1) {
+                cardCount = 0;
+                html = html + '\n' + '</div>';
+                var html = html + '\n' + '<div class="row">'
+            }
+        }
+        root.html(html);
+        onComplete(data.rates)
+    },
+    processData: function () {
+        $.getJSON('/home/GetBankData', function (data) {
+            templateEngine.drawHtml(data, function (result) {
+                for (i = 0; i < result.length; i++) {
+                    var item = result[i];
+                    chartEngine.create('chart-' + result.bankId, result.labels, result.pastBuyRates, result.pastSaleRates);
+                }
+            });
+        });
+    }
+}
+
 var chartEngine = {
     create: function (canvasId, categories, buyData, saleData) {
         var canvas = document.getElementById(canvasId);
