@@ -44,6 +44,7 @@
         </nav>
     </header>
     <div class="container">
+        <div id="spin-div" class="spinner"></div>
         @*<partial name="_CookieConsentPartial" />*@
         <main role="main" class="pb-3">
             @RenderBody()
@@ -84,7 +85,11 @@
 
     </environment>
     <script src="~/js/site.js" asp-append-version="true"></script>
-
+    <script type="text/javascript" >
+        $(document).ready(function () {
+            loadingSpinner.configure();
+        });
+    </script>
     @RenderSection("Scripts", required: false)
 </body>
 </html>
