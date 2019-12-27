@@ -6,14 +6,14 @@
     <div class="jumbotron jumbotron-fluid">
         <div class="container">
             <h1 class="display-4">Tipo de Cambio para hoy</h1>
-            <p class="lead">El tipo de cambio de referencia para el dólar americano del <a href="https://www.bccr.fi.cr/seccion-indicadores-economicos/tipos-de-cambio" target="_">Banco Central</a> para hoy @DateTime.Today.Day de @DateTime.Today.ToString("MMMM", new System.Globalization.CultureInfo("es-CR")) del @DateTime.Today.Year es para la venta <strong><span id="sale-rate-bccr"></span></strong> y para la compra es de <strong><span id="buy-rate-bccr"></span></strong></p>
+            <p class="lead">El tipo de cambio de referencia para el dólar <a href="https://www.bccr.fi.cr/seccion-indicadores-economicos/tipos-de-cambio" target="_">Banco Central</a> para el @DateTime.Today.Day de @DateTime.Today.ToString("MMMM", new System.Globalization.CultureInfo("es-CR")) del @DateTime.Today.Year es para la venta <strong><span id="sale-rate-bccr"></span></strong> y para la compra es de <strong><span id="buy-rate-bccr"></span></strong></p>
         </div>
     </div>
 </div>
 <div id="work-area">
 
 </div>
-<div class="row">
+@*<div class="row">
     <div class="col-md-6 col-xs-12">
         <div class="card">
             <div class="card-header">
@@ -71,7 +71,7 @@
             </div>
         </div>
     </div>
-</div>
+</div>*@
 @section Scripts{
     <script>
         $(document).ready(function () {

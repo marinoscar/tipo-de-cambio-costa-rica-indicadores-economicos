@@ -23,12 +23,12 @@ var cardHtmlTemplate = `
                             <tr>
                                 <td>
                                     <span class="card-title h4 font-weight-bolder"><%= formattedBuyRate %></span>
-                                    <span class="badge <%= formattedPrevDayBuyRateGrowthClass %> "><%= formattedPrevDayBuyRateGrowth %> <i class="fas fa-chevron-down"></i></span>
+                                    <span class="badge <%= formattedPrevDayBuyRateGrowthClass %> "><%= formattedPrevDayBuyRateGrowth %> <i class="<%= formattedPrevDayBuyRateGrowthIconClass %>"></i></span>
 
                                 </td>
                                 <td>
                                     <span class="card-title h4 font-weight-bolder"><%= formattedSaleRate %></span>
-                                    <span class="badge <%= formattedPrevDaySaleRateGrowthClass %> "><%= formattedPrevDayBuyRateGrowth %> <i class="fas fa-chevron-up"></i></span>
+                                    <span class="badge <%= formattedPrevDaySaleRateGrowthClass %> "><%= formattedPrevDayBuyRateGrowth %> <i class="<%= formattedPrevDaySaleRateGrowthIconClass %>"></i></span>
                                 </td>
                             </tr>
                         </tbody>
@@ -49,12 +49,12 @@ var cardHtmlTemplate = `
                         </thead>
                         <tbody>
                             <tr>
-                                <td>semana pasada <span id="buy-prev-day-1"><%= formattedPrevWeekBuyRateGrowth %><i class="fas fa-chevron-down"></i></span></td>
-                                <td>semana pasada <span id="sale-prev-day-1"><%= formattedPrevWeekSaleRateGrowth %><i class="fas fa-chevron-down"></i></span></td>
+                                <td>semana pasada <span id="buy-prev-day-1"><%= formattedPrevWeekBuyRateGrowth %><i class="<%= formattedPrevWeekBuyRateGrowthIconClass %>"></i></span></td>
+                                <td>semana pasada <span id="sale-prev-day-1"><%= formattedPrevWeekSaleRateGrowth %><i class="<%= formattedPrevWeekSaleRateGrowthIconClass %>"></i></span></td>
                             </tr>
                             <tr>
-                                <td>mes pasado <span id="buy-prev-day-1"><%= formattedPrevMonthBuyRateGrowth %><i class="fas fa-chevron-down"></i></span></td>
-                                <td>mes pasado <span id="sale-prev-day-1"><%= formattedPrevMonthSaleRateGrowth %><i class="fas fa-chevron-down"></i></span></td>
+                                <td>mes pasado <span id="buy-prev-day-1"><%= formattedPrevMonthBuyRateGrowth %><i class="<%= formattedPrevMonthBuyRateGrowthIconClass %>"></i></span></td>
+                                <td>mes pasado <span id="sale-prev-day-1"><%= formattedPrevMonthSaleRateGrowth %><i class="<%= formattedPrevMonthSaleRateGrowthIconClass %>"></i></span></td>
                             </tr>
                         </tbody>
                     </table>

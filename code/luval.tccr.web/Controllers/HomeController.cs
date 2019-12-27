@@ -32,7 +32,7 @@ namespace luval.tccr.web.Controllers
         public JsonResult GetBancoCentral()
         {
             var exchangeRepo = new ExchangeRateRepository();
-            return Json(exchangeRepo.GetCentralBankRate(DateTime.Today.Date));
+            return Json(exchangeRepo.GetCentralBankRate(GetTodayDateTime()));
 
         }
 
@@ -40,10 +40,17 @@ namespace luval.tccr.web.Controllers
         public JsonResult GetBankData()
         {
             var exchangeRepo = new ExchangeRateRepository();
-            var rates = exchangeRepo.GetActiveBanksRatesByDate(DateTime.Today.Date).Where(i => i.BankId != 99).ToList();
+            var rates = exchangeRepo.GetActiveBanksRatesByDate(GetTodayDateTime()).Where(i => i.BankId != 99).ToList();
             return Json(new BankRateModelView() {
                 Rates = rates, DateControl = DateTime.Now.ToString("yyyy-MM-dd hh:mm:ss")
             });
+        }
+
+        private DateTime GetTodayDateTime()
+        {
+            var crTime = DateTime.UtcNow.AddHours(-6);
+            if (crTime.Hour < 7) crTime = crTime.AddDays(-1);
+            return crTime.Date;
         }
     }
 }
