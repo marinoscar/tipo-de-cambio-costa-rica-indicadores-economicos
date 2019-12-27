@@ -23,12 +23,12 @@ var cardHtmlTemplate = `
                             <tr>
                                 <td>
                                     <span class="card-title h4 font-weight-bolder"><%= formattedBuyRate %></span>
-                                    <span class="badge <%= formattedPrevWeekBuyRateGrowthClass %> "><%= formattedPrevWeekBuyRateGrowth %> <i class="fas fa-chevron-down"></i></span>
+                                    <span class="badge <%= formattedPrevDayBuyRateGrowthClass %> "><%= formattedPrevDayBuyRateGrowth %> <i class="fas fa-chevron-down"></i></span>
 
                                 </td>
                                 <td>
                                     <span class="card-title h4 font-weight-bolder"><%= formattedSaleRate %></span>
-                                    <span class="badge <%= formattedPrevWeekSaleRateGrowthClass %> "><%= formattedPrevWeekBuyRateGrowth %> <i class="fas fa-chevron-up"></i></span>
+                                    <span class="badge <%= formattedPrevDaySaleRateGrowthClass %> "><%= formattedPrevDayBuyRateGrowth %> <i class="fas fa-chevron-up"></i></span>
                                 </td>
                             </tr>
                         </tbody>
@@ -49,12 +49,12 @@ var cardHtmlTemplate = `
                         </thead>
                         <tbody>
                             <tr>
-                                <td>semana pasada <span id="buy-prev-day-1">+1.72 (0.53%) <i class="fas fa-chevron-down"></i></span></td>
-                                <td>semana pasada <span id="sale-prev-day-1">+1.72 (0.53%) <i class="fas fa-chevron-down"></i></span></td>
+                                <td>semana pasada <span id="buy-prev-day-1"><%= formattedPrevWeekBuyRateGrowth %><i class="fas fa-chevron-down"></i></span></td>
+                                <td>semana pasada <span id="sale-prev-day-1"><%= formattedPrevWeekSaleRateGrowth %><i class="fas fa-chevron-down"></i></span></td>
                             </tr>
                             <tr>
-                                <td>mes pasado <span id="buy-prev-day-1">+1.72 (0.53%) <i class="fas fa-chevron-down"></i></span></td>
-                                <td>mes pasado <span id="sale-prev-day-1">+1.72 (0.53%) <i class="fas fa-chevron-down"></i></span></td>
+                                <td>mes pasado <span id="buy-prev-day-1"><%= formattedPrevMonthBuyRateGrowth %><i class="fas fa-chevron-down"></i></span></td>
+                                <td>mes pasado <span id="sale-prev-day-1"><%= formattedPrevMonthSaleRateGrowth %><i class="fas fa-chevron-down"></i></span></td>
                             </tr>
                         </tbody>
                     </table>
@@ -79,7 +79,7 @@ var templateEngine = {
             if (cardCount > 1) {
                 cardCount = 0;
                 html = html + '\n' + '</div>';
-                var html = html + '\n' + '<div class="row">'
+                html = html + '\n' + '<div class="row">'
             }
         }
         root.html(html);
@@ -90,7 +90,7 @@ var templateEngine = {
             templateEngine.drawHtml(data, function (result) {
                 for (i = 0; i < result.length; i++) {
                     var item = result[i];
-                    chartEngine.create('chart-' + result.bankId, result.labels, result.pastBuyRates, result.pastSaleRates);
+                    chartEngine.create('chart-' + item.bankId, item.labels, item.pastBuyRates, item.pastSaleRates);
                 }
             });
         });

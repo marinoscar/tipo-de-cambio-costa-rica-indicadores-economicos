@@ -34,11 +34,17 @@ namespace luval.tccr.storage
         [NotMapped]
         public string FormattedPrevDaySaleRateGrowth { get; set; }
         [NotMapped]
+        public string FormattedPrevDaySaleRateGrowthClass { get; set; }
+        [NotMapped]
+        public string FormattedPrevDaySaleRateGrowthIconClass { get; set; }
+        [NotMapped]
         public string FormattedPrevDayBuyRate { get; set; }
         [NotMapped]
         public string FormattedPrevDayBuyRateGrowth { get; set; }
         [NotMapped]
         public string FormattedPrevDayBuyRateGrowthClass { get; set; }
+        [NotMapped]
+        public string FormattedPrevDayBuyRateGrowthIconClass { get; set; }
         [NotMapped]
         public string FormattedPrevWeekSaleRate { get; set; }
         [NotMapped]
@@ -46,11 +52,15 @@ namespace luval.tccr.storage
         [NotMapped]
         public string FormattedPrevWeekSaleRateGrowthClass { get; set; }
         [NotMapped]
+        public string FormattedPrevWeekSaleRateGrowthIconClass { get; set; }
+        [NotMapped]
         public string FormattedPrevWeekBuyRate { get; set; }
         [NotMapped]
         public string FormattedPrevWeekBuyRateGrowth { get; set; }
         [NotMapped]
         public string FormattedPrevWeekBuyRateGrowthClass { get; set; }
+        [NotMapped]
+        public string FormattedPrevWeekBuyRateGrowthIconClass { get; set; }
         [NotMapped]
         public string FormattedPrevMonthSaleRate { get; set; }
         [NotMapped]
@@ -58,11 +68,15 @@ namespace luval.tccr.storage
         [NotMapped]
         public string FormattedPrevMonthSaleRateGrowthClass { get; set; }
         [NotMapped]
+        public string FormattedPrevMonthSaleRateGrowthIconClass { get; set; }
+        [NotMapped]
         public string FormattedPrevMonthBuyRate { get; set; }
         [NotMapped]
         public string FormattedPrevMonthBuyRateGrowth { get; set; }
         [NotMapped]
         public string FormattedPrevMonthBuyRateGrowthClass { get; set; }
+        [NotMapped]
+        public string FormattedPrevMonthBuyRateGrowthIconClass { get; set; }
 
         [NotMapped]
         public List<string> Labels { get; set; }
@@ -86,12 +100,36 @@ namespace luval.tccr.storage
             FormattedPrevWeekBuyRate = DoFormat(PrevWeekBuyRate, ci);
             FormattedPrevMonthSaleRate = DoFormat(PrevMonthSaleRate, ci);
             FormattedPrevMonthBuyRate = DoFormat(PrevMonthBuyRate, ci);
-            ComputeGrowth(ci, PrevDayBuyRate, SaleRate, FormattedPrevDayBuyRateGrowth, FormattedPrevDayBuyRateGrowthClass);
-            ComputeGrowth(ci, PrevWeekBuyRate, SaleRate, FormattedPrevWeekBuyRateGrowth, FormattedPrevWeekBuyRateGrowthClass);
-            ComputeGrowth(ci, PrevMonthBuyRate, SaleRate, FormattedPrevMonthBuyRateGrowth, FormattedPrevMonthBuyRateGrowthClass);
+
+            ComputeGrowth(ci, PrevDayBuyRate, BuyRate,
+                (val) => { FormattedPrevDayBuyRateGrowth = val; },
+                (val) => { FormattedPrevDayBuyRateGrowthClass = val; },
+                (val) => { FormattedPrevDayBuyRateGrowthIconClass = val; });
+            ComputeGrowth(ci, PrevWeekBuyRate, BuyRate,
+                (val) => { FormattedPrevWeekBuyRateGrowth = val; },
+                (val) => { FormattedPrevWeekBuyRateGrowthClass = val; },
+                (val) => { FormattedPrevWeekBuyRateGrowthIconClass = val; });
+            ComputeGrowth(ci, PrevMonthBuyRate, BuyRate,
+                (val) => { FormattedPrevMonthBuyRateGrowth = val; },
+                (val) => { FormattedPrevMonthBuyRateGrowthClass = val; },
+                (val) => { FormattedPrevMonthBuyRateGrowthIconClass = val; });
+
+            ComputeGrowth(ci, PrevDaySaleRate, SaleRate,
+                (val) => { FormattedPrevDaySaleRateGrowth = val; },
+                (val) => { FormattedPrevDaySaleRateGrowthClass = val; },
+                (val) => { FormattedPrevDaySaleRateGrowthIconClass = val; });
+            ComputeGrowth(ci, PrevWeekSaleRate, SaleRate,
+                (val) => { FormattedPrevWeekSaleRateGrowth = val; },
+                (val) => { FormattedPrevWeekSaleRateGrowthClass = val; },
+                (val) => { FormattedPrevWeekSaleRateGrowthIconClass = val; });
+            ComputeGrowth(ci, PrevMonthSaleRate, SaleRate,
+                (val) => { FormattedPrevMonthSaleRateGrowth = val; },
+                (val) => { FormattedPrevMonthSaleRateGrowthClass = val; },
+                (val) => { FormattedPrevMonthSaleRateGrowthIconClass = val; });
+
         }
 
-        private void ComputeGrowth(CultureInfo ci, double? prev, double? current, string toFormat, string classValue)
+        private void ComputeGrowth(CultureInfo ci, double? prev, double? current, Action<string> toFormat, Action<string> classValue, Action<string> iconClassValue)
         {
             var growth = 0d;
             var diff = 0d;
@@ -100,13 +138,22 @@ namespace luval.tccr.storage
                 growth = Math.Round((1d - (prev.Value / current.Value)) * 100, 2);
                 diff = Math.Round(current.Value - prev.Value, 2);
             }
-            toFormat = string.Format("{0}{1} ({2}%)", diff < 0 ? "-" : "+", DoFormat(diff, ci), DoFormat(growth, ci));
+            toFormat(string.Format("{0}{1} ({2}%)", diff < 0 ? "-" : "+", DoFormat(diff, ci), DoFormat(growth, ci)));
             if (diff == 0)
-                classValue = "badge-secondary";
+            {
+                classValue("badge-secondary");
+                iconClassValue("");
+            }
             else if (diff < 0)
-                classValue = "badge-success";
+            {
+                classValue("badge-success");
+                iconClassValue("fas fa-chevron-down");
+            }
             else
-                classValue = "badge-danger";
+            {
+                classValue("badge-danger");
+                iconClassValue("fas fa-chevron-up");
+            }
         }
 
         private string DoFormat(double? dbl, CultureInfo ci)

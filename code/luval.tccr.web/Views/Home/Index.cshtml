@@ -75,12 +75,12 @@
 @section Scripts{
     <script>
         $(document).ready(function () {
-            $.getJSON('/home/GetBancoCentral', function (result) {
-                $('#sale-rate-bccr').html(result.formattedSaleRate);
-                $('#buy-rate-bccr').html(result.formattedBuyRate);
+            //$.getJSON('/home/GetBancoCentral', function (result) {
+            //    $('#sale-rate-bccr').html(result.formattedSaleRate);
+            //    $('#buy-rate-bccr').html(result.formattedBuyRate);
 
-                console.log('Bank: ' + result.bankName + ' Date: ' + result.date + ' Buy: ' + result.buyRate);
-            });
+            //    console.log('Bank: ' + result.bankName + ' Date: ' + result.date + ' Buy: ' + result.buyRate);
+            //});
             templateEngine.processData();
             //chartEngine.create('chart-1', chartEngine.categoriesSample, chartEngine.buySample, chartEngine.saleSample);
             console.log("ready!");
