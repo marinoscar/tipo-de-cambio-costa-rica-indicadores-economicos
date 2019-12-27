@@ -34,7 +34,7 @@ var cardHtmlTemplate = `
                         </tbody>
                     </table>
                 </div>
-                <div class="chart-container">
+                <div class="">
                     <canvas id="chart-<%= bankId %>"></canvas>
                 </div>
             </div>
@@ -91,6 +91,7 @@ var templateEngine = {
                 for (i = 0; i < result.length; i++) {
                     var item = result[i];
                     chartEngine.create('chart-' + item.bankId, item.labels, item.pastBuyRates, item.pastSaleRates);
+                    $('#data-date-reference').html(data.dateControl);
                 }
             });
         });
